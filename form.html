@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Interest Questionnaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #555;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .options label:hover {
+            background-color: #f0f8ff;
+            border-color: #aaa;
+        }
+        .options input[type="radio"] {
+            display: none;
+        }
+        .options input[type="radio"]:checked + label {
+            background-color: #e6f7ff;
+            border-color: #00aaff;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Career Interest Questionnaire</h1>
+        <form>
+            <!-- Repeat for each question -->
+            <div class="question">
+                <h3>1. How do you usually solve puzzles or challenges?</h3>
+                <div class="options">
+                    <input type="radio" id="q1-a" name="q1" value="Software Developer">
+                    <label for="q1-a">A) By experimenting and trying different approaches. (Software Developer)</label>
+
+                    <input type="radio" id="q1-b" name="q1" value="Cybersecurity Analyst">
+                    <label for="q1-b">B) By finding and fixing mistakes step by step. (Cybersecurity Analyst)</label>
+
+                    <input type="radio" id="q1-c" name="q1" value="Data Analyst">
+                    <label for="q1-c">C) By looking for patterns and making logical connections. (Data Analyst)</label>
+                </div>
+            </div>
+
+            <!-- Repeat for each question -->
+            <!-- Example for Question 2 -->
+            <div class="question">
+                <h3>2. What excites you most about technology?</h3>
+                <div class="options">
+                    <input type="radio" id="q2-a" name="q2" value="Software Developer">
+                    <label for="q2-a">A) Building something new, like an app or game. (Software Developer)</label>
+
+                    <input type="radio" id="q2-b" name="q2" value="Cybersecurity Analyst">
+                    <label for="q2-b">B) Keeping systems safe and secure from threats. (Cybersecurity Analyst)</label>
+
+                    <input type="radio" id="q2-c" name="q2" value="Data Analyst">
+                    <label for="q2-c">C) Discovering insights or trends from data. (Data Analyst)</label>
+                </div>
+            </div>
+
+            <!-- Repeat the same structure for the remaining questions -->
+            
+            <!-- Submit button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

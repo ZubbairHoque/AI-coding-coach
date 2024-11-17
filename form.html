@@ -3,113 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Interest Questionnaire</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #555;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .question h3 {
-            margin-bottom: 10px;
-            color: #444;
-        }
-        .options label {
-            display: block;
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #f9f9f9;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-        .options label:hover {
-            background-color: #f0f8ff;
-            border-color: #aaa;
-        }
-        .options input[type="radio"] {
-            display: none;
-        }
-        .options input[type="radio"]:checked + label {
-            background-color: #e6f7ff;
-            border-color: #00aaff;
-        }
-        .submit-btn {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-top: 20px;
-            font-size: 16px;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .submit-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Career Path Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Career Interest Questionnaire</h1>
-        <form>
-            <!-- Repeat for each question -->
-            <div class="question">
-                <h3>1. How do you usually solve puzzles or challenges?</h3>
-                <div class="options">
-                    <input type="radio" id="q1-a" name="q1" value="Software Developer">
-                    <label for="q1-a">A) By experimenting and trying different approaches. (Software Developer)</label>
-
-                    <input type="radio" id="q1-b" name="q1" value="Cybersecurity Analyst">
-                    <label for="q1-b">B) By finding and fixing mistakes step by step. (Cybersecurity Analyst)</label>
-
-                    <input type="radio" id="q1-c" name="q1" value="Data Analyst">
-                    <label for="q1-c">C) By looking for patterns and making logical connections. (Data Analyst)</label>
-                </div>
+  <div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      <h1>Career Path Quiz</h1>
+      <form action="https://formbold.com/s/FORM_ID" method="POST">
+        <!-- Question 1 -->
+        <div class="formbold-question">
+          <label>1. How do you usually solve puzzles or challenges?</label>
+          <div class="formbold-radio-flex">
+            <label>
+              <input type="radio" name="q1" value="Software Developer">
+              A) By experimenting and trying different approaches. 
+            </label>
+              <label>
+                <input type="radio" name="q1" value="Cybersecurity Analyst">
+                B) By finding and fixing mistakes step by step.
+              </label>
+              <label>
+                <input type="radio" name="q1" value="Data Analyst">
+                C) By looking for patterns and making logical connections.
+              </label>
             </div>
-
-            <!-- Repeat for each question -->
-            <!-- Example for Question 2 -->
-            <div class="question">
-                <h3>2. What excites you most about technology?</h3>
-                <div class="options">
-                    <input type="radio" id="q2-a" name="q2" value="Software Developer">
-                    <label for="q2-a">A) Building something new, like an app or game. (Software Developer)</label>
-
-                    <input type="radio" id="q2-b" name="q2" value="Cybersecurity Analyst">
-                    <label for="q2-b">B) Keeping systems safe and secure from threats. (Cybersecurity Analyst)</label>
-
-                    <input type="radio" id="q2-c" name="q2" value="Data Analyst">
-                    <label for="q2-c">C) Discovering insights or trends from data. (Data Analyst)</label>
-                </div>
+          </div>
+        <br><br>
+    
+          <!-- questions 2 -->
+          <div class="formbold-question">
+            <label>2. What excites you most about technology?</label>
+            <div class="formbold-radio-flex">
+              <label>
+                <input type="radio" name="q2" value="Software Developer">
+                A) Building something new, like an app or game. 
+              </label>
+              <label>
+                <input type="radio" name="q2" value="Cybersecurity Analyst">
+                B) Keeping systems safe and secure from threats. 
+              </label>
+              <label>
+                <input type="radio" name="q2" value="Data Analyst">
+                C) Discovering insights or trends from data. 
+              </label>
             </div>
-
-            <!-- Repeat the same structure for the remaining questions -->
-            
-            <!-- Submit button -->
-            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+          <br><br>
+    
+          <!-- question 3 -->
+          <div class="formbold-question">
+              <label>3. How do you feel about troubleshooting problems?</label>
+              <div class="formbold-radio-flex">
+                  <label>
+                    <input type="radio" name="q3" value="Software Developer">
+                    A) I enjoy writing solutions or creating tools to fix them.                
+                  </label>
+                  <label>
+                    <input type="radio" name="q3" value="Cybersecurity Analyst">
+                    B)  I like investigating what went wrong and ensuring it doesn’t happen again.
+                  </label>
+                  <label>
+                    <input type="radio" name="q3" value="Data Analyst">
+                    C) Discovering insights or trends from data. 
+                  </label>
+                </div>
+          </div>
+          <br><br>
+  
+          <!-- question 4 -->
+          <div class="formbold-question">
+            <label>4. What do you enjoy most about working on projects?</label>
+            <div class="formbold-radio-flex">
+                <label>
+                  <input type="radio" name="q4" value="Software Developer">
+                  A) Designing and building something from scratch.                
+                </label>
+                <label>
+                  <input type="radio" name="q4" value="Cybersecurity Analyst">
+                  B)  Protecting and improving the system for everyone.
+                </label>
+                <label>
+                  <input type="radio" name="q4" value="Data Analyst">
+                  C) Helping others make better decisions using facts and figures.  
+                </label>
+              </div>
+        </div>
+        <br><br>
+        
+        <!-- question 5 -->
+        <div class="formbold-question">
+          <label>5. Which of these tasks sounds most appealing to you?</label>
+          <div class="formbold-radio-flex">
+            <label>
+              <input type="radio" name="q5" value="Software Developer">
+              A) Writing instructions for a computer to follow.
+            </label>
+            <label>
+              <input type="radio" name="q5" value="Cybersecurity Analyst">
+              B) Investigating how a security breach happened.
+            </label>
+            <label>
+              <input type="radio" name="q5" value="Data Analyst">
+              C) Cleaning and organizing data to make it understandable.
+            </label>
+          </div>
+        </div>
+        <br><br>
+  
+        <!-- question 6 -->
+      <div class="formbold-question">
+        <label>6. How do you feel about learning new skills?</label>
+        <div class="formbold-radio-flex">
+          <label>
+            <input type="radio" name="q6" value="Software Developer">
+            A) I like learning new tools to create things.
+          </label>
+          <label>
+            <input type="radio" name="q6" value="Cybersecurity Analyst">
+            B) I enjoy keeping up with potential risks and how to avoid them.
+          </label>
+          <label>
+            <input type="radio" name="q6" value="Data Analyst">
+            C) I love exploring ways to make sense of data and draw conclusions.
+          </label>
+        </div>
+      </div>
+      <br><br>
+  
+          
+          <!-- question 7 -->
+      <div class="formbold-question">
+        <label>7. When working with others, what role do you naturally take?</label>
+        <div class="formbold-radio-flex">
+          <label>
+            <input type="radio" name="q7" value="Software Developer">
+            A) I’m the builder, creating the core pieces of the project.
+          </label>
+          <label>
+            <input type="radio" name="q7" value="Cybersecurity Analyst">
+            B) I’m the protector, ensuring the project is secure and running smoothly.
+          </label>
+          <label>
+            <input type="radio" name="q7" value="Data Analyst">
+            C) I’m the explainer, sharing insights that help the team understand the bigger picture.
+          </label>
+        </div>
+      </div>
+      <br><br>
+  
+        <!-- question 8 -->
+      <div class="formbold-question">
+        <label>8. What type of work environment do you prefer?</label>
+        <div class="formbold-radio-flex">
+          <label>
+            <input type="radio" name="q8" value="Software Developer">
+            A) A creative space where I can focus on building solutions.
+          </label>
+          <label>
+            <input type="radio" name="q8" value="Cybersecurity Analyst">
+            B) A fast-paced environment where I’m solving urgent problems.
+          </label>
+          <label>
+            <input type="radio" name="q8" value="Data Analyst">
+            C) A structured setting where I can analyze and report findings.
+          </label>
+        </div>
+      </div>
+      <br><br>
+  
+      <!-- question 9 -->
+      <div class="formbold-question">
+        <label>9. How do you handle repetitive tasks?</label>
+        <div class="formbold-radio-flex">
+          <label>
+            <input type="radio" name="q9" value="Software Developer">
+            A) I automate them so they’re easier to manage.
+          </label>
+          <label>
+            <input type="radio" name="q9" value="Cybersecurity Analyst">
+            B) I use them to find weaknesses and make improvements.
+          </label>
+          <label>
+            <input type="radio" name="q9" value="Data Analyst">
+            C) I follow them to prepare and organize information accurately.
+          </label>
+        </div>
+      </div>
+      <br><br>
+  
+      <!-- question 10 -->
+      <div class="formbold-question">
+        <label>10. What motivates you most?</label>
+        <div class="formbold-radio-flex">
+          <label>
+            <input type="radio" name="q10" value="Software Developer">
+            A) Seeing a project I built work perfectly.
+          </label>
+          <label>
+            <input type="radio" name="q10" value="Cybersecurity Analyst">
+            B) Stopping bad things from happening.
+          </label>
+          <label>
+            <input type="radio" name="q10" value="Data Analyst">
+            C) Helping others make informed decisions.
+          </label>
+        </div>
+      </div>
+      <br><br>
+  
+      <!-- question 11 -->
+      <div class="formbold-question">
+        <label>11. What kind of problems do you enjoy solving?</label>
+        <div class="formbold-radio-flex">
+          <label>
+            <input type="radio" name="q11" value="Software Developer">
+            A) Building solutions to solve user needs.
+          </label>
+          <label>
+            <input type="radio" name="q11" value="Cybersecurity Analyst">
+            B) Investigating threats and solving security breaches.
+          </label>
+          <label>
+            <input type="radio" name="q11" value="Data Analyst">
+            C) Analyzing data to find meaningful answers.
+          </label>
+        </div>
+      </div>
+      <br><br>
+  
+      <!-- question 12 -->
+      <div class="formbold-question">
+        <label>12. Which phrase best describes you?</label>
+        <div class="formbold-radio-flex">
+          <label>
+            <input type="radio" name="q12" value="Software Developer">
+            A) “I love creating and fixing things.”
+          </label>
+          <label>
+            <input type="radio" name="q12" value="Cybersecurity Analyst">
+            B) “I like protecting what’s important.”
+          </label>
+          <label>
+            <input type="radio" name="q12" value="Data Analyst">
+            C) “I’m curious about finding the truth behind the numbers.”
+          </label>
+        </div>
+      </div>
+      <br><br>
+  
+      <!-- question 13 -->
+      <div class="formbold-question">
+        <label>13. When working on a team, how do you prefer to contribute?</label>
+        <div class="formbold-radio-flex">
+          <label>
+            <input type="radio" name="q13" value="Software Developer">
+            A) Building and testing tools for the project.
+          </label>
+          <label>
+            <input type="radio" name="q13" value="Cybersecurity Analyst">
+            B) Making sure the project is safe and secure.
+          </label>
+          <label>
+            <input type="radio" name="q13" value="Data Analyst">
+            C) Analyzing and presenting information to guide decisions.
+          </label>
+        </div>
+      </div>
+      <br><br>
+  
+      <!-- question 14 -->
+      <div class="formbold-question">
+        <label>14. Which scenario sounds like something you’d enjoy?</label>
+        <div class="formbold-radio-flex">
+          <label>
+            <input type="radio" name="q14" value="Software Developer">
+            A) Designing a new website or app.
+          </label>
+          <label>
+            <input type="radio" name="q14" value="Cybersecurity Analyst">
+            B) Preventing hackers from accessing sensitive information.
+          </label>
+          <label>
+            <input type="radio" name="q14" value="Data Analyst">
+            C) Identifying trends in customer behavior.
+          </label>
+        </div>
+      </div>
+      <br><br>
+  
+  
+      <!-- Question 15 -->
+      <div class="formbold-question">
+        <label>15. What is your approach to learning from mistakes?</label>
+        <div class="formbold-radio-flex">
+          <label>
+            <input type="radio" name="q15" value="Software Developer">
+            A) Improve my tools or code to avoid the same issue.
+          </label>
+          <label>
+            <input type="radio" name="q15" value="Cybersecurity Analyst">
+            B) Investigate how it happened and strengthen defenses. 
+          </label>
+          <label>
+            <input type="radio" name="q15" value="Data Analyst">
+            C) Check the data again to ensure I understand the situation better. 
+          </label>
+        </div>
+      </div>
+      <br><br><br><br>
+          <button type="submit" class="formbold-btn">Submit</button>
         </form>
+      </div>
     </div>
 </body>
 </html>
+
+  

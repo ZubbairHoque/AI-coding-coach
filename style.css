@@ -1,0 +1,97 @@
+/* Existing imports and resets */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5; /* Subtle background for the page */
+}
+
+.formbold-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+
+.formbold-form-wrapper {
+  margin: 0 auto;
+  max-width: 600px; /* Slightly wider for readability */
+  background: white;
+  padding: 40px;
+  border-radius: 8px; /* Rounded corners for the form */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.formbold-question {
+  margin-bottom: 20px;
+}
+
+.formbold-question label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.formbold-radio-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Space between options */
+}
+
+.formbold-radio-flex label {
+  padding: 10px;
+  border: 1px solid #333; /* Noir outline */
+  border-radius: 8px; /* Curved corners */
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formbold-radio-flex label:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formbold-radio-flex input[type="radio"] {
+  display: none; /* Hide the default radio button */
+}
+
+.formbold-radio-flex input[type="radio"]:checked + label {
+  background-color: #6a64f1; /* Highlight color */
+  color: white;
+  border-color: #6a64f1;
+}
+
+.formbold-btn {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 12px;
+  border: none;
+  background-color: #6a64f1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formbold-btn:hover {
+  background-color: #574dcf;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}

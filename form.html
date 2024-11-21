@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Path Quiz</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
   <div class="formbold-main-wrapper">
     <div class="formbold-form-wrapper">
       <h1>Career Path Quiz</h1>
-      <form action="#" method="POST">
+      <form id="myForm" action="http://localhost:3000/submit-form" method="POST">
         
         <!-- Question 1 -->
         <div class="formbold-question">
@@ -28,6 +29,22 @@
         </div>
         <br><br>
     
+        <div class="formbold-question">
+          <label>2. What excites you most about technology?</label>
+          <div class="formbold-radio-flex">
+            <input type="radio" id="q2-option1" name="q2" value="Software Developer">
+            <label for="q2-option1">A) Building something new, like an app or game. (Software Developer)</label>
+        
+            <input type="radio" id="q2-option2" name="q2" value="Cybersecurity Analyst">
+            <label for="q2-option2">B) Keeping systems safe and secure from threats. (Cybersecurity Analyst)</label>
+        
+            <input type="radio" id="q2-option3" name="q2" value="Data Analyst">
+            <label for="q2-option3">C) Discovering insights or trends from data. (Data Analyst)</label>
+          </div>
+        </div>
+
+        <br><br>
+        
          <!-- Question 3 -->
 <div class="formbold-question">
   <label>3. How do you feel about troubleshooting problems?</label>
@@ -250,17 +267,14 @@
 </div>
 
       <br><br><br><br>
-          <button type="submit" class="formbold-btn">Submit</button>
+      <button type="submit" class="formbold-btn">Submit</button>
+
       </form>
     </div>
   </div>
-  
 
-          
-        </form>
-      </div>
-    </div>
 </body>
+<script src="script.js"></script>
 </html>
 
   

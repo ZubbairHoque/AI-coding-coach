@@ -1,7 +1,7 @@
 document.querySelector("#myForm").addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent default form submission
 
-  console.log('Form submission triggered');
+  console.log("Form submission triggered");
 
   const questions = document.querySelectorAll(".formbold-question");
   let allAnswered = true;
@@ -20,38 +20,54 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
   });
 
   if (allAnswered) {
-    alert("Thank you for completing the questionnaire!");
-
     // Create FormData object to collect form data
     const formData = new FormData(this); // `this` refers to the form element here
 
     // Convert FormData to a plain object
     const data = Object.fromEntries(formData.entries());
-    console.log('Form Data:', data); // Log the form data
+    console.log("Form Data:", data); // Log the form data
 
-    // Make the fetch request to submit the form data to the server
-    console.log('Making fetch request...');
-    fetch('http://localhost:3000/submit-form', { // Adjust the URL if needed
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data), // Convert the data to JSON
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not OK');
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log('Server response:', data);
-      alert('Form submitted successfully!');
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('There was an error submitting the form.');
+    // Store the entire form data in sessionStorage
+    sessionStorage.setItem("formData", JSON.stringify(data));
+
+    // Calculate career
+    const careerTally = {}; // Object to track tallies for each career
+    Object.values(data).forEach((value) => {
+      careerTally[value] = (careerTally[value] || 0) + 1; // Count occurrences
     });
+
+    // Determine the career with the highest tally
+    const userCareer = Object.keys(careerTally).reduce((a, b) =>
+      careerTally[a] > careerTally[b] ? a : b
+    );
+
+    // Store the career result in sessionStorage
+    sessionStorage.setItem("userCareer", userCareer);
+
+    // Redirect to results page
+    window.location.href = "resultsform.html";
+
+    // Optionally: Make a fetch request to submit the form data to the server
+    console.log("Making fetch request...");
+    fetch("http://localhost:3000/submit-form", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data), // Send the data as JSON
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not OK");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Server response:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   } else {
     alert("Please answer all questions before submitting.");
   }

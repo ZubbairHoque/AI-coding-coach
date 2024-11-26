@@ -41,33 +41,15 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
       careerTally[a] > careerTally[b] ? a : b
     );
 
+    // Debugging output
+    console.log("User Career:", userCareer);
+    console.log("Form Data Stored:", JSON.stringify(data));
+
     // Store the career result in sessionStorage
     sessionStorage.setItem("userCareer", userCareer);
 
     // Redirect to results page
     window.location.href = "resultsform.html";
-
-    // Optionally: Make a fetch request to submit the form data to the server
-    console.log("Making fetch request...");
-    fetch("http://localhost:3000/submit-form", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data), // Send the data as JSON
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not OK");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Server response:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
   } else {
     alert("Please answer all questions before submitting.");
   }

@@ -9,35 +9,35 @@
 </head>
 <body class="bg-gray-800 text-white font-roboto">
 
-  <div class="container mx-auto p-8">
-    <header class="text-center mb-8">
+  
+    <header class="text-center py-6 mb-8">
       <h1 class="text-4xl font-bold text-teal-400">Find Your Coding Technique</h1>
       <p class="text-xl text-gray-300 mt-2">Your results are in! Here’s what we discovered about your coding preferences.</p>
     </header>
 
-    <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
-      <h2 class="text-2xl font-semibold text-teal-300 mb-4">Your Future Career Path</h2>
-      
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold text-teal-200">Your Coding Technique:</h3>
-        <p class="text-lg text-gray-400">Software Development</p> <!-- Replace with dynamic content -->
-      </div>
+    <div class="max-w-4xl mx-auto px-6 py-8 bg-black">
 
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold text-teal-200">What A Software Developer Do?</h3>
-        <p class="text-lg text-gray-400"></p> <!-- Replace with dynamic content -->
-      </div>
-
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold text-teal-200">Why This Career Path Fits You</h3>
-        <p class="text-lg text-gray-400">You’re someone who loves working on interactive web applications! Your preferred tools are most likely JavaScript and libraries like React or Vue.</p>
-      </div>
-
-      <div class="flex justify-center mt-8">
-        <a href="index.html" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-md text-lg">Back to Questionnaire</a>
-      </div>
+    <div id="career-info" class="mb-4">
+      <h3 class="text-lg font-semibold text-teal-200">Your Future Career Path</h3>
+      <p id="career-result" class="text-lg text-gray-400">No career result found.</p>
+    </div>
+    
+    <div id="career-description">
+      <h3 id="career-description-title" class="text-lg font-semibold text-teal-200">What a [Career] Does</h3>
+      <p id="career-details" class="text-lg text-gray-400">We couldn't retrieve any details.</p>
+    </div>    
+    
+    <div id="career-fit" class="mb-4">
+      <h3 class="text-lg font-semibold text-teal-200">Why This Career Path Fits You</h3>
+      <p id="career-fit-reason" class="text-lg text-gray-400">No explanation available.</p>
+    </div>
+    
+    <div class="flex justify-center mt-8">
+      <a href="index.html" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-md text-lg">Back to Questionnaire</a>
     </div>
   </div>
+  <script src = 'results.js'>
+  </script>
 
 </body>
 </html>
